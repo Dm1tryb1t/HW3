@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>c++.png</file>
+        <file>c-programming-language.png</file>
+        <file>python.png</file>
+        <file>provider.png</file>
+        <file>fon.png</file>
+    </qresource>
+</RCC>

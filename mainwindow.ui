@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>841</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background:url(:/icons/fon.png);
+background-position:center center;
+background-repeat: no-repeat;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	color: rgb(0, 255, 0);
+}</string>
+        </property>
+        <property name="text">
+         <string>Programm name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <italic>true</italic>
+          <fontweight>DemiBold</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	color: rgb(0, 255, 0);
+}</string>
+        </property>
+        <property name="text">
+         <string>Programm description</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMinAndMaxSize</enum>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item alignment="Qt::AlignBottom">
+         <widget class="QComboBox" name="comboBox">
+          <property name="minimumSize">
+           <size>
+            <width>220</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>220</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox QAbstractItemView {
+	color: rgb(81, 255, 28);	
+	background-color: rgb(242, 101, 255);
+	padding: 10px;
+	selection-background-color: rgb(39, 44, 54);
+}
+QComboBox{
+	color: rgb(81, 255, 28);
+	placeholder-text-color:rgb(81, 255, 28);
+	/*placeholder-text-font: bold, 10px;*/
+	background-color: rgb(182, 56, 255);
+	border-radius:4;
+}
+QComboBox:hover{
+	background-color: rgb(242, 101, 255);
+}</string>
+          </property>
+          <property name="currentIndex">
+           <number>-1</number>
+          </property>
+          <property name="maxVisibleItems">
+           <number>3</number>
+          </property>
+          <property name="maxCount">
+           <number>3</number>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QComboBox::AdjustToContents</enum>
+          </property>
+          <property name="minimumContentsLength">
+           <number>3</number>
+          </property>
+          <property name="placeholderText">
+           <string>Язык программирования</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>C</string>
+           </property>
+           <property name="icon">
+            <iconset resource="sss.qrc">
+             <normaloff>:/icons/c-programming-language.png</normaloff>:/icons/c-programming-language.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>C++</string>
+           </property>
+           <property name="icon">
+            <iconset resource="sss.qrc">
+             <normaloff>:/icons/c++.png</normaloff>:/icons/c++.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Python</string>
+           </property>
+           <property name="icon">
+            <iconset resource="sss.qrc">
+             <normaloff>:/icons/python.png</normaloff>:/icons/python.png</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignLeft|Qt::AlignBottom">
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>10px</family>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit{
+	font:bold, 10px;
+	color:rgb(81, 255, 28);
+	background-color: rgb(182, 56, 255);
+	border-radius:4;
+	placeholder-text-color: rgb(81, 255, 28);
+	/*placeholder-text-font: bold, 10px;*/
+}</string>
+          </property>
+          <property name="placeholderText">
+           <string>путь до файла</string>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignLeft|Qt::AlignBottom">
+         <widget class="QToolButton" name="toolButton">
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <bold>true</bold>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QToolButton{
+	color: rgb(81, 255, 28);
+	background-color: rgb(182, 56, 255);
+	border-radius:4;
+}
+QToolButton:hover{
+	background-color: rgb(242, 101, 255);
+}</string>
+          </property>
+          <property name="text">
+           <string>view</string>
+          </property>
+          <property name="icon">
+           <iconset resource="sss.qrc">
+            <normaloff>:/icons/provider.png</normaloff>:/icons/provider.png</iconset>
+          </property>
+          <property name="toolButtonStyle">
+           <enum>Qt::ToolButtonTextBesideIcon</enum>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignLeft|Qt::AlignBottom">
+         <widget class="QPushButton" name="pushButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	color: rgb(81, 255, 28);
+	background-color: rgb(182, 56, 255);
+	border-radius:4;
+}
+QPushButton:hover{
+	background-color: rgb(242, 101, 255)
+}</string>
+          </property>
+          <property name="text">
+           <string>Let's go</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="sss.qrc"/>
+ </resources>
+ <connections/>
+</ui>
