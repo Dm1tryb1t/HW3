@@ -21,9 +21,9 @@ void Result::on_pushButton_clicked()
 {
     ui->textEdit->setText("");
     if (this->isMaximized()) {
-        emit firstWindowMaximized();
+        emit firstwindowMaximized();
     } else {
-        emit firstWindow();
+        emit firstwindow();
     }
     this->close();
 }

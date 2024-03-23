@@ -17,8 +17,8 @@ public:
     void setAnswer(QString);
 
 signals:
-    void firstWindow();
-    void firstWindowMaximized();
+    void firstwindow();
+    void firstwindowMaximized();
 
 private slots:
     void on_pushButton_clicked();
