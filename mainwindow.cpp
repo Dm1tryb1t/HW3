@@ -29,7 +29,7 @@ void MainWindow::on_pushButton_clicked()
     QFile file(filePath);
     bool firstCondition = file.exists();
     bool secondCondition = language.contains("++") && (filePath.endsWith(".cpp") || filePath.endsWith(".cc"));
-    bool thirdCondition = language.contains("ton") && filePath.endsWith(".py");
+    bool thirdCondition = language.contains("thon") && filePath.endsWith(".py");
     bool fourthCondition = filePath.endsWith(".c");
     if (!(firstCondition && (secondCondition || thirdCondition || fourthCondition))) {
         error.show();
