@@ -13,13 +13,15 @@ SOURCES += \
     error.cpp \
     main.cpp \
     mainwindow.cpp \
-    result.cpp
+    result.cpp \
+    solver.cpp
 
 HEADERS += \
     edit.h \
     error.h \
     mainwindow.h \
-    result.h
+    result.h \
+    solver.h
 
 FORMS += \
     edit.ui \

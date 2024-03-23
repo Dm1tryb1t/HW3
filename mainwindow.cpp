@@ -63,6 +63,11 @@ void MainWindow::on_toolButton_clicked()
 
 void MainWindow::resShow() {
     /* ... тут запускаем прогу ... */
+    Solver solver;
+    QString language = ui->comboBox->currentText();
+    QString filepath = ui->lineEdit->text();
+    QString answer = solver.getAnswer(language, filepath);
+    result.setAnswer(answer);
     if (this->isMaximized()) {
         result.showMaximized();
     } else {

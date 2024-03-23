@@ -1,0 +1,13 @@
+#ifndef SOLVER_H
+#define SOLVER_H
+
+#include <QProcess>
+
+class Solver
+{
+public:
+    Solver();
+    QString getAnswer(const QString&, const QString&);
+};
+
+#endif // SOLVER_H

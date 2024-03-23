@@ -4,6 +4,7 @@
 #include "edit.h"
 #include "result.h"
 #include "error.h"
+#include "solver.h"
 
 #include <QProcess>
 #include <QMainWindow>
