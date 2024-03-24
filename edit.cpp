@@ -30,6 +30,8 @@ void Edit::on_pushButton_clicked()
 {
     if (ui->checkBox->isChecked() && ui->checkBox_2->isChecked()) {
         emit showResult();
+        ui->checkBox->setChecked(0);
+        ui->checkBox_2->setChecked(0);
         this->close();
     }
 }

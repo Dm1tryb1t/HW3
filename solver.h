@@ -2,6 +2,7 @@
 #define SOLVER_H
 
 #include <QProcess>
+#include <QFile>
 
 class Solver
 {

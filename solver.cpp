@@ -15,24 +15,47 @@ QString Solver::getAnswer(const QString& language, const QString& filename) {
         } else {
             progname.resize(progname.size() - 4);
         }
-        process.start("cmd.exe", QStringList() << "g++" << filename << "-o" << progname);
+        progname += ".exe";
+        process.start("g++", QStringList() << filename << "-o" << progname);
         process.waitForFinished();
         QString error = QString(process.readAll());
         if (error != "") {
             process.close();
-            return error + "-2";
+            return error;
         }
         // process.startCommand("C:\\prog");
-        process.start("cmd.exe", QStringList() << progname);
+        process.startCommand(progname);
         process.waitForFinished();
         QString answer = QString(process.readAll());
-        // process.startCommand("rm C:\\prog");
-        process.close();
-        return answer + "-3";
-    } /*else if (language.contains("thon")) {
-
-    } else {
-
-    }*/
+        QFile prog(progname);
+        prog.remove();
+        // process.startCommand("del " + progname);
+        return answer;
+    }
+    if (!language.contains("thon")) {
+        // process.startCommand("g++ " + filename + " -o C:\\prog -w");
+        QString progname = filename;
+        progname.resize(progname.size() - 2);
+        progname += ".exe";
+        process.start("gcc", QStringList() << filename << "-o" << progname);
+        process.waitForFinished();
+        QString error = QString(process.readAll());
+        if (error != "") {
+            process.close();
+            return error;
+        }
+        // process.startCommand("C:\\prog");
+        process.startCommand(progname);
+        process.waitForFinished();
+        QString answer = QString(process.readAll());
+        QFile prog(progname);
+        prog.remove();
+        // process.startCommand("del " + progname);
+        return answer;
+    }
+    process.start("python", QStringList() << filename);
+    process.waitForFinished();
+    QString answer = QString(process.readAll());
+    return answer;
     return "-1";
 }
