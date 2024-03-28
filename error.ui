@@ -20,7 +20,16 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Error</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="sss.qrc">
+    <normaloff>:/icons/error.jpg</normaloff>:/icons/error.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background:rgb(214, 143, 255);
+}</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -49,6 +58,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="sss.qrc"/>
+ </resources>
  <connections/>
 </ui>

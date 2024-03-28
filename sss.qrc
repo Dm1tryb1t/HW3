@@ -5,5 +5,7 @@
         <file>python.png</file>
         <file>provider.png</file>
         <file>fon.png</file>
+        <file>comp.jpg</file>
+        <file>error.jpg</file>
     </qresource>
 </RCC>

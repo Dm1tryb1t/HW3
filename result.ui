@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>Result</class>
  <widget class="QWidget" name="Result">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,20 +13,42 @@
     <height>459</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <hintingpreference>PreferDefaultHinting</hintingpreference>
+   </font>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
   <property name="windowTitle">
    <string>Result</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="sss.qrc">
+    <normaloff>:/icons/comp.jpg</normaloff>:/icons/comp.jpg</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget {
-background:url(:/icons/fon.png);
-/*background-position:center center;*/
-background-repeat: no-repeat;
+   <string notr="true">QWidget{
+/*background-image: url(:/icons/fon.png);
+background-position: center center;
+background-repeat: no-repeat;*/
+background-color: rgb(170, 0, 255);
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetDefaultConstraint</enum>
+   </property>
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
@@ -58,19 +83,23 @@ background-repeat: no-repeat;
        </property>
        <property name="font">
         <font>
-         <family></family>
+         <family>10px</family>
          <pointsize>15</pointsize>
          <italic>false</italic>
-         <bold>false</bold>
+         <bold>true</bold>
         </font>
        </property>
        <property name="cursor" stdset="0">
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">QTextEdit {
-	color: rgb(255, 0, 200);
-	font: semi-bold, 15px;
+        <string notr="true">QTextEdit{
+	font:bold, 10px;
+	color:rgb(81, 255, 28);
+	background-color: rgb(182, 56, 255);
+	border-radius:4;
+	placeholder-text-color: rgb(81, 255, 28);
+	/*placeholder-text-font: bold, 10px;*/
 }</string>
        </property>
        <property name="readOnly">
@@ -83,8 +112,8 @@ p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'','15px'; font-size:15pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'10px'; font-size:15pt; font-weight:700; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:400;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
@@ -130,7 +159,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
           <string notr="true">QPushButton{
 	/*color: rgb(81, 255, 28);*/
 	color: rgb(255, 0, 200);
-	background-color: rgb(182, 56, 255);
+	background-color: rgb(182, 56, 255) ;
 	border-radius:4;
 }
 QPushButton:hover{
@@ -148,6 +177,8 @@ QPushButton:hover{
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="sss.qrc"/>
+ </resources>
  <connections/>
 </ui>

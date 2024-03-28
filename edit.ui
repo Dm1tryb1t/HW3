@@ -25,14 +25,35 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="sss.qrc">
+    <normaloff>:/icons/comp.jpg</normaloff>:/icons/comp.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background:rgb(255, 170, 255)
+}</string>
+  </property>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>10</x>
      <y>10</y>
      <width>400</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+	color: rgb(81, 255, 28);
+	background-color: rgb(182, 56, 255);
+	border-radius:4;
+}</string>
    </property>
    <property name="readOnly">
     <bool>true</bool>
@@ -44,14 +65,29 @@
   <widget class="QToolButton" name="toolButton">
    <property name="geometry">
     <rect>
-     <x>541</x>
+     <x>420</x>
      <y>10</y>
      <width>50</width>
      <height>30</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QToolButton{
+	color: rgb(81, 255, 28);
+	background-color: rgb(182, 56, 255);
+	border-radius:4;
+}
+QToolButton:hover{
+	background-color: rgb(242, 101, 255)
+}</string>
    </property>
    <property name="text">
     <string>open</string>
@@ -60,11 +96,23 @@
   <widget class="QLineEdit" name="lineEdit_2">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>10</x>
      <y>50</y>
      <width>250</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+	color: rgb(81, 255, 28);
+	background-color: rgb(182, 56, 255);
+	border-radius:4;
+}</string>
    </property>
    <property name="readOnly">
     <bool>true</bool>
@@ -76,27 +124,24 @@
   <widget class="QCheckBox" name="checkBox">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>120</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Confirm file</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox_2">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
+     <x>265</x>
      <y>50</y>
      <width>120</width>
      <height>30</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox{
+	color: rgb(81, 255, 28);
+}</string>
+   </property>
    <property name="text">
-    <string>Confirm lang</string>
+    <string>Confirm</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
@@ -107,6 +152,21 @@
      <width>200</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: rgb(81, 255, 28);
+	background-color: rgb(182, 56, 255);
+	border-radius:4;
+}
+QPushButton:hover{
+	background-color: rgb(242, 101, 255)
+}</string>
    </property>
    <property name="text">
     <string>Let's gooooo</string>
@@ -121,11 +181,28 @@
      <height>30</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: rgb(81, 255, 28);
+	background-color: rgb(182, 56, 255);
+	border-radius:4;
+}
+QPushButton:hover{
+	background-color: rgb(242, 101, 255)
+}</string>
+   </property>
    <property name="text">
     <string>Return and edit</string>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="sss.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -16,7 +16,7 @@ QString Solver::getAnswer(const QString& language, const QString& filename) {
             progname.resize(progname.size() - 4);
         }
         progname += ".exe";
-        process.start("g++", QStringList() << filename << "-o" << progname);
+        process.start("g++", QStringList() << filename << "-o" << progname << "-w" << "-std=c++20");
         process.waitForFinished();
         QString error = QString(process.readAll());
         if (error != "") {
@@ -37,11 +37,12 @@ QString Solver::getAnswer(const QString& language, const QString& filename) {
         QString progname = filename;
         progname.resize(progname.size() - 2);
         progname += ".exe";
-        process.start("gcc", QStringList() << filename << "-o" << progname);
+        process.start("gcc", QStringList() << filename << "-o" << progname << "-w" << "-std=c++20");
         process.waitForFinished();
         QString error = QString(process.readAll());
         if (error != "") {
-            process.close();
+            QFile prog(progname);
+            prog.remove();
             return error;
         }
         // process.startCommand("C:\\prog");
